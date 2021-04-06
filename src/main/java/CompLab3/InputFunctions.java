@@ -13,10 +13,10 @@ public class InputFunctions {
         while (true) {
             System.out.print("""
                     Выберите функцию:
-                    1. 2*x^3-9*x^2+3*x+11
-                    2. 3*x^5+x^2+0.1
-                    3. sin(x)+cos(x)
-                    4. x^2+10*x-6
+                    1. 2*x^3 - 9*x^2 + 3*x + 11
+                    2. 3*x^5 + x^2 + 0.1
+                    3. sin(x) + cos(x)
+                    4. 1 / x
                     0. Завершение и выход из программы
                     Номер функции:\s""");
             try {

@@ -15,7 +15,7 @@ public class TrapezoidMethod {
             a = b;
             b = tmp;
         }
-        drawChart.draw(a, b, number);
+
         double I = functions.getI(a, b, number), step, save_down = a, y0, yn, sum, r = e + 1, answer = 0;
         long n = 2;
         //double R = fun.IfMax(a,b,number)*Math.pow((b-a),3)/12/Math.pow(n,2);
@@ -38,7 +38,13 @@ public class TrapezoidMethod {
             a = save_down;
         }
 
-        System.out.println("Решение методом трапеций:");
-        outputFunctions.outAnswer(e, answer, I, r, n);
+        System.out.println("\nРешение методом трапеций:");
+
+        if (Double.isNaN(answer) || Double.isNaN(I) || Double.isNaN(r) || Double.isNaN(Math.abs(100 * r / ((I + answer) / 2)))) {
+            System.out.println("В выбранном интервале присутсвует разрыв первого рода!\n");
+        } else {
+            drawChart.draw(a, b, number);
+            outputFunctions.outAnswer(e, answer, I, r, n);
+        }
     }
 }

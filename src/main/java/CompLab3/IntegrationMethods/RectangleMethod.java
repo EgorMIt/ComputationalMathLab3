@@ -1,6 +1,5 @@
 package CompLab3.IntegrationMethods;
 
-import CompLab3.DrawChart;
 import CompLab3.Functions;
 import CompLab3.OutputFunctions;
 
@@ -30,8 +29,13 @@ public class RectangleMethod {
             aNew = a;
         }
 
-        System.out.println("Решение методом средних прямоугольников:");
-        outputFunctions.outAnswer(e, sum, I, r, n);
+        System.out.println("\nРешение методом средних прямоугольников:");
+
+        if (Double.isNaN(sum) || Double.isNaN(I) || Double.isNaN(r) || Double.isNaN(Math.abs(100 * r / ((I + sum) / 2)))) {
+            System.out.println("В выбранном интервале присутсвует разрыв первого рода!\n");
+        } else {
+            outputFunctions.outAnswer(e, sum, I, r, n);
+        }
     }
 
     public void startMethodLeft(double a, double b, double e, int number) {
@@ -56,8 +60,13 @@ public class RectangleMethod {
             aNew = a;
         }
 
-        System.out.println("Решение методом левых прямоугольников:");
-        outputFunctions.outAnswer(e, sum, I, r, n);
+        System.out.println("\nРешение методом левых прямоугольников:");
+
+        if (Double.isNaN(sum) || Double.isNaN(I) || Double.isNaN(r) || Double.isNaN(Math.abs(100 * r / ((I + sum) / 2)))) {
+            System.out.println("В выбранном интервале присутсвует разрыв первого рода!\n");
+        } else {
+            outputFunctions.outAnswer(e, sum, I, r, n);
+        }
     }
 
     public void startMethodRight(double a, double b, double e, int number) {
@@ -83,7 +92,12 @@ public class RectangleMethod {
             aNew = a;
         }
 
-        System.out.println("Решение методом правых прямоугольников:");
-        outputFunctions.outAnswer(e, sum, I, r, n);
+        System.out.println("\nРешение методом правых прямоугольников:");
+
+        if (Double.isNaN(sum) || Double.isNaN(I) || Double.isNaN(r) || Double.isNaN(Math.abs(100 * r / ((I + sum) / 2)))) {
+            System.out.println("В выбранном интервале присутсвует разрыв первого рода!\n");
+        } else {
+            outputFunctions.outAnswer(e, sum, I, r, n);
+        }
     }
 }

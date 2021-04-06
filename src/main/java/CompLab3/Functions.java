@@ -13,7 +13,7 @@ public class Functions {
                 return Math.sin(x) + Math.cos(x);
             }
             case (4) -> {
-                return Math.pow(x, 2) + 10 * x - 6;
+                return 1 / x;
             }
             default -> {
                 System.out.println("Введите число в диапазоне 1-4");
@@ -35,7 +35,7 @@ public class Functions {
                 return Math.sin(x) - Math.cos(x);
             }
             case (4) -> {
-                return Math.pow(x, 3) / 3 + 5 * Math.pow(x, 2) - 6 * x;
+                return Math.log(x);
             }
             default -> {
                 System.out.println("Введите число в диапазоне 1-4");

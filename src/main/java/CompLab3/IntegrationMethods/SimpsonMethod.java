@@ -43,8 +43,13 @@ public class SimpsonMethod {
             r = Math.abs(I - answer);
             aNew = a;
         }
-        System.out.println("Решение методом Симпсона:");
-        outputFunctions.outAnswer(e, answer, I, r, n);
-        drawChart.draw(a, b, number);
+        System.out.println("\nРешение методом Симпсона:");
+
+        if (Double.isNaN(answer) || Double.isNaN(I) || Double.isNaN(r) || Double.isNaN(Math.abs(100 * r / ((I + answer) / 2)))) {
+            System.out.println("В выбранном интервале присутсвует разрыв первого рода!\n");
+        } else {
+            drawChart.draw(a, b, number);
+            outputFunctions.outAnswer(e, answer, I, r, n);
+        }
     }
 }
