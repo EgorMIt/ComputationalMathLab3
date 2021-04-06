@@ -13,11 +13,11 @@ import javax.swing.*;
 public class DrawChart {
     Functions functions = new Functions();
 
-    public void draw(double a, double b, int number){
+    public void draw(double a, double b, int number) {
         XYSeries series = new XYSeries("Function");
 
-        for(double i = a; i <= b+0.01; i+=0.01){
-            series.add(i, functions.f(i,number));
+        for (double i = a; i <= b + 0.01; i += 0.01) {
+            series.add(i, functions.f(i, number));
         }
 
         XYDataset xyDataset = new XYSeriesCollection(series);
@@ -32,7 +32,7 @@ public class DrawChart {
         // Помещаем график на фрейм
         frame.getContentPane()
                 .add(new ChartPanel(chart));
-        frame.setSize(400,300);
+        frame.setSize(400, 300);
         frame.setVisible(true);
     }
 }

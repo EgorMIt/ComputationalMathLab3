@@ -68,7 +68,7 @@ public class InputFunctions {
 
     public int inputA() {
         while (true) {
-            System.out.print("Введите нижний предел интегрирования (Целое число) a: ");
+            System.out.print("Введите нижний целочисленный предел интегрирования a: ");
             try {
                 return Integer.parseInt(in.next().trim());
             } catch (NumberFormatException ignored) {
@@ -78,7 +78,7 @@ public class InputFunctions {
 
     public int inputB() {
         while (true) {
-            System.out.print("Введите верхний предел интегрирования (Целое число) b: ");
+            System.out.print("Введите верхний целочисленный предел интегрирования b: ");
             try {
                 return Integer.parseInt(in.next().trim());
             } catch (NumberFormatException ignored) {
