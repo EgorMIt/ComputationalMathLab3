@@ -1,3 +1,5 @@
+package CompLab3;
+
 public class OutputFunctions {
     public void outAnswer(double e, double answer, double I, double r, long n){
         System.out.println("\n------------------------------------------");

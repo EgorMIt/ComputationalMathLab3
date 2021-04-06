@@ -1,3 +1,5 @@
+package CompLab3;
+
 public class Functions {
     public double f(double x, int number) {
         switch (number) {

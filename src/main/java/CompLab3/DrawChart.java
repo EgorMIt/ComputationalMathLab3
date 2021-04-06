@@ -1,3 +1,5 @@
+package CompLab3;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -31,6 +33,6 @@ public class DrawChart {
         frame.getContentPane()
                 .add(new ChartPanel(chart));
         frame.setSize(400,300);
-        frame.show();
+        frame.setVisible(true);
     }
 }
